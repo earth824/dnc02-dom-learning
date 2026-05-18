@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bg-red {
+        background-color: red;
+      }
+      .ml-20 {
+        margin-left: 5rem;
+      }
+    </style>
+  </head>
+
+  <!-- body is a parent -->
+  <!-- body is an ancestor of nav -->
+  <body>
+    <!-- body.prepend(newAside) aside will become thew first child -->
+
+    <!-- header is a children  -->
+    <header id="main-header">
+      <!-- body descendant -->
+      <nav>NAVVVVVVV</nav>
+      <div name="test"></div>
+      <h1></h1>
+    </header>
+
+    <div class="main-content"></div>
+    <!-- footer and header are siblings -->
+    <footer></footer>
+    <button>Click ME</button>
+    <input type="text" name="price" id="price" placeholder="Enter price" />
+    <script src="./dom.js"></script>
+    <!-- Event listener 1. -->
+    <!-- <button onclick="alert('jdjdjdjdj')">Click ME</button> -->
+    <!-- body.append(newAside) aside will become the last child -->
+  </body>
+</html>
