@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script>
+      // const hOneEl = React.createElement(
+      //   'h1',
+      //   { className: 'head' },
+      //   'HELLO WORLD'
+      // ); // <h1 class="head">HELLO WORLD</h1>
+      // const root = ReactDOM.createRoot(document.getElementById('root'));
+      // root.render(hOneEl);
+
+      // const formEl = React.createElement(
+      //   'form',
+      //   {},
+      //   React.createElement('input', {
+      //     type: 'text',
+      //     name: 'email',
+      //     placeholder: 'Enter email'
+      //   }),
+      //   React.createElement('input', {
+      //     type: 'password',
+      //     name: 'password',
+      //     placeholder: 'Enter password'
+      //   }),
+      //   React.createElement('button', {}, 'Submit')
+      // );
+
+      // const root = ReactDOM.createRoot(document.getElementById('root'));
+      // root.render(formEl);
+    </script>
+
+    <script type="text/babel">
+      const formEl = (
+        <form>
+          <input type="text" />
+          <input type="password" />
+          <button>Submit</button>
+        </form>
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(formEl);
+    </script>
+  </body>
+</html>

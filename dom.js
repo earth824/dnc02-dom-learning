@@ -29,13 +29,13 @@
 // const b = document.getElementsByName('test');
 // const c = document.getElementsByTagName('div');
 
-const newAside = document.createElement('aside');
-newAside.innerHTML = `
-  <div>
-    <h1>Main Sidebar</h1>
-  </div>
-`;
-console.log(newAside);
+// const newAside = document.createElement('aside');
+// newAside.innerHTML = `
+//   <div>
+//     <h1>Main Sidebar</h1>
+//   </div>
+// `;
+// console.log(newAside);
 
 // append, prepend, before, after
 // document.body.append(newAside);
@@ -84,24 +84,79 @@ console.log(newAside);
 //   alert('CICKED');
 // });
 
-const input = document.getElementById('price');
+// const inputEl = document.getElementById('price');
 
-const p = document.createElement('p');
-p.innerHTML = 'Invalid price: price must be a number and greater than zero';
-p.style.color = 'red';
+// const p = document.createElement('p');
+// p.innerHTML = 'Invalid price: price must be a number and greater than zero';
+// p.style.color = 'red';
 
-input.addEventListener('input', function () {
-  // 1. READ input value
-  const userInput = input.value;
-  // console.log(input.value);
-  // 2. validate input: must be a number and greater than zero
-  const price = Number(userInput);
-  const isNumeric = !isNaN(price); // '' ==> 0, '     ' ==> 0
+// input.addEventListener('input', function () {
+//   const userInput = input.value.trim();
 
-  // 3. if validation failed, cretae new element with error message and then insert after input element
-  if (!isNumeric || price <= 0) {
-    input.after(p);
-  } else {
-    p.remove();
+//   // skip validation when field is empty
+//   if (userInput === '') {
+//     p.remove();
+//     return;
+//   }
+
+//   const price = Number(userInput);
+//   // isNaN('') === false because Number('') === 0, so we check after trim above
+//   const isValid = !isNaN(price) && price > 0;
+
+//   if (isValid) {
+//     p.remove();
+//   } else {
+//     input.after(p);
+//   }
+// });
+
+// const products = [
+//   {
+//     id: 1,
+//     name: 'Coke',
+//     price: 20
+//   },
+//   {
+//     id: 2,
+//     name: 'Pepsi',
+//     price: 18
+//   }
+// ];
+
+// products.map((product) => {});
+
+// const inputEl = document.getElementById('price');
+// inputEl.addEventListener('input', function () {
+//   console.log(this.value);
+// }); // this keyword
+
+// inputEl.addEventListener('input', () => {
+//   console.log(this);
+// }); // this keyword
+
+// EVENT OBJECT
+// inputEl.addEventListener('input', function (event) {
+//   console.log(event);
+// });
+
+// const callback = function (a) {
+//   console.log(a.target);
+// };
+
+// const btnEl = document.querySelector('button');
+// btnEl.addEventListener('', callback);
+// USER Click button ==> btnEl called: callback({ target, data, type, ... })
+
+// const formEl = document.querySelector('form');
+// formEl.addEventListener('submit', function (event) {
+//   event.preventDefault();
+// });
+
+const anchorEl = document.querySelector('a');
+anchorEl.addEventListener('click', function (event) {
+  event.preventDefault();
+  const isConfirm = confirm('R U sure ?');
+  if (isConfirm) {
+    location.href = 'https://instagram.com';
   }
 });
